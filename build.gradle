@@ -11,6 +11,7 @@ repositories {
     mavenLocal()
     mavenCentral()
 }
+/*日志相关包*/
 List logger = [
         'org.apache.logging.log4j:log4j-api:2.1',
         'org.apache.logging.log4j:log4j-core:2.1',
@@ -18,7 +19,9 @@ List logger = [
         'org.apache.logging.log4j:log4j-web:2.1',
         'org.slf4j:jcl-over-slf4j:1.7.12'
 ]
-def spring_version="4.0.5.RELEASE"
+
+/*spring 相关包*/
+def spring_version="4.2.3.RELEASE"
 List spring =[
         "org.springframework:spring-core:$spring_version",
         "org.springframework:spring-beans:$spring_version",
@@ -34,8 +37,12 @@ List spring =[
 ]
 
 /*spring security安全支持*/
+def security_version="4.2.3.RELEASE"
 List spring_security=[
-        "org.springframework.security:spring-security-core:4.2.3.RELEASE"
+        "org.springframework.security:spring-security-core:$security_version",
+        "org.springframework.security:spring-security-web:$security_version",
+        "org.springframework.security:spring-security-taglibs:$security_version",
+        "org.springframework.security:spring-security-config:$security_version"
 ]
 
 List jackson = [

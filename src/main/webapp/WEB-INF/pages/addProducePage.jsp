@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>添加用户页面</title>
+    <title>添加商品页面</title>
 </head>
 <body>
-<form action="/mybatisStudy/userManage/insertUser.do", method="post">
+<form action="/springSsecurity/produceManage/insertProduce.do", method="get">
         <table>
             <tr>
                 <td>姓名：</td>

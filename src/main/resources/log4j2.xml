@@ -7,8 +7,8 @@
                     pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %c{2}(%F:%L) - %m%n" />
         </Console>
 
-        <RollingFile name="fixedTimeFileAppender" fileName="${sys:index.log.home}/mybatisStudy.log"
-                     filePattern="${sys:index.log.home}/mybatisStudy.log.%d{yyyy-MM-dd}.%i.log.gz">
+        <RollingFile name="fixedTimeFileAppender" fileName="${sys:index.log.home}/springSecurity.log"
+                     filePattern="${sys:index.log.home}/springSecurity.log.%d{yyyy-MM-dd}.%i.log.gz">
             <Filters>
                 <!--文件只输出info及以上（onMatch）级别的信息，其它的(onMismatch)直接拒绝-->
                 <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
