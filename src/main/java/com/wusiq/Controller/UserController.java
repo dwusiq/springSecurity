@@ -2,7 +2,7 @@ package com.wusiq.Controller;
 
 import com.alibaba.fastjson.JSON;
 import com.wusiq.Dto.ReqDeleteUserDto;
-import com.wusiq.Dto.ReqInsertUserDto;
+import com.wusiq.Dto.ReqInsertProduceDto;
 import com.wusiq.Dto.ReqQueryUserByIdDto;
 import com.wusiq.Dto.ReqUpdateUserDto;
 import com.wusiq.entity.Users;
@@ -26,11 +26,11 @@ public class UserController {
     UserService userService;
 
     @RequestMapping(value = "/insertUser.do",method = RequestMethod.POST)
-    public String insertUser(ReqInsertUserDto req){
+    public String insertUser(ReqInsertProduceDto req){
         LOGGER.info("添加用户开始,{}",req);
         Users users = new Users();
-        users.setUsername(req.getUsername());
-        users.setUserage(req.getUserage());
+      /*  users.setUsername(req.getUsername());
+        users.setUserage(req.getUserage());*/
         int i = userService.insertUser(users);
         LOGGER.info("添加用户结束,影响行数:{}",i);
         return "successPage";

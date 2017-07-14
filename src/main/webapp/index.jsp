@@ -11,8 +11,8 @@
   <title>首页</title>
 </head>
 <body>
-   <a href="/mybatisStudy/pageChange/toAddUserPage.do">新增</a>
-   <a href="/mybatisStudy/pageChange/toUpdatePage.do">修改</a>
-   <a href="/mybatisStudy/pageChange/toDeletePage.do">删除</a>
+   <a href="/springSecurity/pageChange/toAddProducePage.do">新增</a>
+   <a href="/springSecurity/pageChange/toUpdatePage.do">修改</a>
+   <a href="/springSecurity/pageChange/toDeletePage.do">删除</a>
 </body>
 </html>

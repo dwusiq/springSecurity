@@ -11,6 +11,13 @@ repositories {
     mavenLocal()
     mavenCentral()
 }
+
+/*jsp jar包*/
+List jsp = ['javax.servlet:jsp-api:2.0']
+
+/*servlet jar包*/
+List servlet = ['javax.servlet:servlet-api:2.5']
+
 /*日志相关包*/
 List logger = [
         'org.apache.logging.log4j:log4j-api:2.1',
@@ -46,9 +53,9 @@ List spring_security=[
 ]
 
 List jackson = [
-        'com.fasterxml.jackson.core:jackson-core:2.4.3',
-        'com.fasterxml.jackson.core:jackson-databind:2.4.3',
-        'com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.4.3',
+        'com.fasterxml.jackson.core:jackson-core:2.8.9',
+        'com.fasterxml.jackson.core:jackson-databind:2.8.9',
+        'com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.8.9',
         'net.sf.json-lib:json-lib:2.4:jdk15'
 ]
 
@@ -69,6 +76,8 @@ List springDataRedis = ["org.springframework.data:spring-data-redis:1.8.4.RELEAS
 
 
 dependencies {
-    compile logger,spring,mybatis,springmybatis,commonsdbcp,mysql,fastjson,jedis,springDataRedis,spring_security,jackson
-    runtime logger,spring,mybatis,springmybatis,commonsdbcp,mysql,fastjson,jedis,springDataRedis,spring_security,jackson
+    compile logger,spring,mybatis,springmybatis,commonsdbcp,mysql,fastjson,jedis,springDataRedis,spring_security,
+            jackson,servlet,jsp
+    runtime logger,spring,mybatis,springmybatis,commonsdbcp,mysql,fastjson,jedis,springDataRedis,spring_security,
+            jackson,servlet,jsp
 }

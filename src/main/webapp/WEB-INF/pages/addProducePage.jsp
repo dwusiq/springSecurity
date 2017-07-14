@@ -14,12 +14,12 @@
 <form action="/springSsecurity/produceManage/insertProduce.do", method="get">
         <table>
             <tr>
-                <td>姓名：</td>
-                <td><input type="text" name="username"/></td>
+                <td>产品名称：</td>
+                <td><input type="text" name="produceName"/></td>
             </tr>
             <tr>
-                <td>年龄：</td>
-                <td><input type="text" name="userage"/></td>
+                <td>产品价格：</td>
+                <td><input type="text" name="producePrice"/></td>
             </tr>
         </table>
         <input type="submit" value="提交"/>

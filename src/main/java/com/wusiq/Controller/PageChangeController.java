@@ -1,8 +1,10 @@
 package com.wusiq.Controller;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -12,10 +14,10 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "pageChange")
 public class PageChangeController {
     /*新增页*/
-    @RequestMapping(value = "toAddUserPage.do",method = RequestMethod.GET)
+    @RequestMapping(value = "toAddProducePage.do",method = RequestMethod.GET)
     public ModelAndView toAddUserPage(){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("addUserPage");
+        mv.setViewName("addProducePage");
         return mv;
     }
 
@@ -35,5 +37,16 @@ public class PageChangeController {
         return mv;
     }
 
+    /*登录页*/
+    @RequestMapping(value = "toLoginPage.do",method = RequestMethod.GET)
+    public ModelAndView toLoginPage(@RequestParam(value = "error", required = false) String error){
+        ModelAndView mv = new ModelAndView();
+        if(StringUtils.isEmpty(error)){
+            mv.setViewName("loginPage");
+        }else {
+            mv.setViewName("loginFialure");
+        }
+        return mv;
+    }
 
 }
