@@ -11,11 +11,10 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class LoginController {
-    @RequestMapping(value = "/login.do", method = RequestMethod.GET)
+    @RequestMapping(value = "loginPage", method = RequestMethod.GET)
     public ModelAndView login(
             @RequestParam(value = "error", required = false) String error,
             @RequestParam(value = "logout", required = false) String logout) {
-        System.out.println("tews00");
         ModelAndView model = new ModelAndView();
         if (error != null) {
             model.addObject("error", "不正确的用户名和密码");

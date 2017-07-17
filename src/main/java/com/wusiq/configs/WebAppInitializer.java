@@ -18,6 +18,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected String[] getServletMappings() {//拦截请求路径
-        return new String[]{"*.do","*.json"};
+       // return new String[]{"*.do","*.json"};
+        return new String[]{"/"};
     }
 }

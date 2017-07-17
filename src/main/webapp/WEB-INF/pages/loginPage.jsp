@@ -10,8 +10,8 @@
 <head>
     <title>登录</title>
 </head>
-<body onload="document.f.usernmae.focus();">
-     <form>
+<body onload="document.f.username.focus();">
+     <form name="f">
          <table>
              <tr>
                  <td>帐号：</td>

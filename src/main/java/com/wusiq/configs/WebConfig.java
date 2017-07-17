@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(value = "com.wusiq")
+@ComponentScan(basePackages = "com.wusiq")
 public class WebConfig extends WebMvcConfigurerAdapter{
 
     /*配置视图解释器*/
