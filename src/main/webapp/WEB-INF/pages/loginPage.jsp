@@ -10,20 +10,24 @@
 <head>
     <title>登录</title>
 </head>
-<body onload="document.f.username.focus();">
-     <form name="f">
+<body onload='document.f.username.focus();'>
+     <form name='f' action="${pageContext.request.contextPath}/login/loginDo" method="POST">
          <table>
              <tr>
                  <td>帐号：</td>
-                 <td><input type="text" name="username"></td>
+                 <td><input type="text" name="userId"></td>
              </tr>
              <tr>
                  <td>密码：</td>
-                 <td><input type="password" name="username"></td>
+                 <td><input type="password" name="userPwd"></td>
              </tr>
              <tr>
-                 <input type="submit" name="submit" value="login"/>
-                 <input type="hidden" name="_csrf" value="454576523565323523523422">
+                 <td colspan="2">
+                     <input type="submit" name="submit" value="login"/>
+              <%--       <input type="hidden" name="_csrf" value="454576523565323523523422">--%>
+                 </td>
+
+
              </tr>
          </table>
      </form>

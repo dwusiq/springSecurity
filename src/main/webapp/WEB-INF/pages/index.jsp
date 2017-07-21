@@ -11,7 +11,7 @@
   <title>首页</title>
 </head>
 <body>
-   <a href="/springSecurity/pageChange/toAddProducePage.do">新增</a>
+   <a href="/springSecurity/userManage/toAddProducePage.do">新增</a>
    <a href="/springSecurity/pageChange/toUpdatePage.do">修改</a>
    <a href="/springSecurity/pageChange/toDeletePage.do">删除</a>
 </body>

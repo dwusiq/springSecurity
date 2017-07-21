@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 用户管理的控制器类
@@ -24,6 +25,14 @@ public class UserController {
     private static Logger LOGGER =  LoggerFactory.getLogger(UserController.class);
     @Autowired
     UserService userService;
+
+    /*新增页*/
+    @RequestMapping(value = "toAddProducePage.do",method = RequestMethod.GET)
+    public ModelAndView toAddUserPage(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("addProducePage");
+        return mv;
+    }
 
     @RequestMapping(value = "/insertUser.do",method = RequestMethod.POST)
     public String insertUser(ReqInsertProduceDto req){
